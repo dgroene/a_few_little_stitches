@@ -13,6 +13,7 @@
 
   body {
     font-family: 'Nunito', system-ui, sans-serif;
+    overflow-x: clip;
   }
 }
 

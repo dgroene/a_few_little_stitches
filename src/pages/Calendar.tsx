@@ -66,15 +66,17 @@ export default function Calendar() {
               <button onClick={next} className="btn btn-ghost btn-circle btn-sm" aria-label="Next month">→</button>
             </div>
 
+            {/* Day headers + grid — scrollable on narrow screens */}
+            <div className="overflow-x-auto">
             {/* Day headers */}
-            <div className="grid grid-cols-7 gap-1 mb-1">
+            <div className="grid grid-cols-7 gap-1 mb-1 min-w-[280px]">
               {DAYS.map(d => (
                 <div key={d} className="text-center text-xs font-extrabold uppercase tracking-wider text-base-content/75 py-1">{d}</div>
               ))}
             </div>
 
             {/* Calendar grid */}
-            <div className="grid grid-cols-7 gap-1">
+            <div className="grid grid-cols-7 gap-1 min-w-[280px]">
               {/* Leading empty cells */}
               {Array.from({ length: firstDow }).map((_, i) => (
                 <div key={`empty-${i}`} />
@@ -117,6 +119,7 @@ export default function Calendar() {
                 )
               })}
             </div>
+            </div>{/* end overflow-x-auto */}
 
             {/* Legend */}
             <div className="flex flex-wrap gap-4 mt-5 pt-4 border-t border-base-300">
