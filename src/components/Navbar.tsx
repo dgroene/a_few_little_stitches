@@ -13,36 +13,36 @@ export default function Navbar() {
   return (
     <div className="sticky top-0 z-50 bg-base-100 shadow-sm">
       <RainbowStripe />
-      <div className="navbar max-w-6xl mx-auto px-4">
+      <div className="flex items-center justify-between max-w-6xl mx-auto px-4 py-2">
 
-        {/* Mobile hamburger + logo */}
-        <div className="navbar-start">
-          <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
-              </svg>
-            </label>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52 font-bold">
-              {links.map(l => (
-                <li key={l.to}>
-                  <NavLink to={l.to} className={({ isActive }) => isActive ? 'text-neutral font-black underline decoration-primary decoration-2 underline-offset-2' : ''}>
-                    {l.label}
-                  </NavLink>
-                </li>
-              ))}
-              <li className="mt-2">
-                <NavLink to="/classes" className="btn btn-primary btn-sm rounded-full">Sign Up</NavLink>
+        {/* Logo — fixed size, never shrinks */}
+        <NavLink to="/" className="flex-shrink-0">
+          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="A Few Little Stitches" className="h-24 w-auto" />
+        </NavLink>
+
+        {/* Mobile hamburger (right side) */}
+        <div className="dropdown dropdown-end lg:hidden">
+          <label tabIndex={0} className="btn btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </label>
+          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52 font-bold">
+            {links.map(l => (
+              <li key={l.to}>
+                <NavLink to={l.to} className={({ isActive }) => isActive ? 'text-neutral font-black underline decoration-primary decoration-2 underline-offset-2' : ''}>
+                  {l.label}
+                </NavLink>
               </li>
-            </ul>
-          </div>
-          <NavLink to="/" className="flex items-center ml-1">
-            <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="A Few Little Stitches" className="h-24 w-auto" />
-          </NavLink>
+            ))}
+            <li className="mt-2">
+              <NavLink to="/classes" className="btn btn-primary btn-sm rounded-full">Sign Up</NavLink>
+            </li>
+          </ul>
         </div>
 
-        {/* Desktop links */}
-        <div className="navbar-end hidden lg:flex gap-1">
+        {/* Desktop links (right side) */}
+        <div className="hidden lg:flex items-center gap-1">
           {links.map(l => (
             <NavLink
               key={l.to}
@@ -59,6 +59,7 @@ export default function Navbar() {
             Sign Up
           </NavLink>
         </div>
+
       </div>
     </div>
   )
