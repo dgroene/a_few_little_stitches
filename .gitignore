@@ -1,0 +1,17 @@
+# Build output
+dist/
+
+# Dependencies
+node_modules/
+
+# macOS metadata
+.DS_Store
+
+# Local editor / tool files
+.claude/
+memory/
+
+# Local env files (if ever added)
+.env
+.env.local
+.env.*.local

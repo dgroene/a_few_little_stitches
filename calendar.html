@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Calendar — A Few Little Stitches</title>
+  <meta name="description" content="View the weekly class schedule and studio holiday closures for A Few Little Stitches in Frederick, MD.">
+  <link rel="canonical" href="https://www.afewlittlestitches.com/calendar.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__rainbow"></div>
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="A Few Little Stitches home">
+      <img src="assets/logo_stitches_v4_preview.svg" alt="A Few Little Stitches">
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="calendar.html" class="active">Calendar</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="classes.html" class="nav__cta">Sign Up</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="classes.html">Classes</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="classes.html">Sign Up →</a>
+  </nav>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Schedule</span>
+    <h1 style="font-size: clamp(2rem, 4vw, 3rem);">Class Calendar</h1>
+    <p>Classes meet weekly on weekday evenings. We close for all US federal holidays, plus Pi Day, Earth Day, and Juneteenth. Days marked in red are studio closures — no classes that week.</p>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section class="calendar-page">
+  <div class="container">
+    <div class="calendar-layout">
+
+      <!-- Main calendar -->
+      <div>
+        <div class="cal-nav">
+          <button class="cal-nav__btn" id="cal-prev" aria-label="Previous month">&#8592;</button>
+          <h2 class="cal-nav__title" id="cal-title">Loading…</h2>
+          <button class="cal-nav__btn" id="cal-next" aria-label="Next month">&#8594;</button>
+        </div>
+
+        <div class="cal-grid" id="cal-grid" role="grid" aria-label="Monthly calendar">
+          <!-- Populated by calendar.js -->
+        </div>
+
+        <!-- Legend -->
+        <div class="cal-legend" aria-label="Calendar legend">
+          <div class="cal-legend__item">
+            <div class="cal-legend__swatch" style="background: #FF6B6B;"></div>
+            Knitting
+          </div>
+          <div class="cal-legend__item">
+            <div class="cal-legend__swatch" style="background: #00B4D8;"></div>
+            Bag Making
+          </div>
+          <div class="cal-legend__item">
+            <div class="cal-legend__swatch" style="background: #9B5DE5;"></div>
+            Quilting
+          </div>
+          <div class="cal-legend__item">
+            <div class="cal-legend__swatch" style="background: #FFF5F5; border: 1px solid var(--coral);"></div>
+            Studio Closed
+          </div>
+          <div class="cal-legend__item">
+            <div class="cal-legend__swatch" style="background: #FAFAFA; border: 1px solid #ddd;"></div>
+            Weekend
+          </div>
+        </div>
+      </div>
+
+      <!-- Schedule sidebar -->
+      <aside class="schedule-box" aria-label="Weekly class schedule">
+        <h3>Weekly Schedule</h3>
+        <p style="font-size:.82rem; color:var(--gray); margin-bottom:20px; line-height:1.5;">
+          Times are placeholders — final schedule to be confirmed. All classes are 1.5 hours.
+        </p>
+
+        <div class="sched-day">
+          <div class="sched-day__name">Monday</div>
+          <div class="sched-item">
+            <div class="sched-item__dot" style="background:#FF6B6B;"></div>
+            <div>
+              <div class="sched-item__name">Knitting</div>
+              <div class="sched-item__tier">Little Leaguer</div>
+            </div>
+            <div class="sched-item__time">6:00 PM</div>
+          </div>
+          <div class="sched-item">
+            <div class="sched-item__dot" style="background:#9B5DE5;"></div>
+            <div>
+              <div class="sched-item__name">Quilting</div>
+              <div class="sched-item__tier">Little Leaguer</div>
+            </div>
+            <div class="sched-item__time">7:30 PM</div>
+          </div>
+        </div>
+
+        <div class="sched-day">
+          <div class="sched-day__name">Tuesday</div>
+          <div class="sched-item">
+            <div class="sched-item__dot" style="background:#FF6B6B;"></div>
+            <div>
+              <div class="sched-item__name">Knitting</div>
+              <div class="sched-item__tier">All-Star</div>
+            </div>
+            <div class="sched-item__time">6:00 PM</div>
+          </div>
+          <div class="sched-item">
+            <div class="sched-item__dot" style="background:#00B4D8;"></div>
+            <div>
+              <div class="sched-item__name">Bag Making</div>
+              <div class="sched-item__tier">Little Leaguer</div>
+            </div>
+            <div class="sched-item__time">7:30 PM</div>
+          </div>
+        </div>
+
+        <div class="sched-day">
+          <div class="sched-day__name">Wednesday</div>
+          <div class="sched-item">
+            <div class="sched-item__dot" style="background:#00B4D8;"></div>
+            <div>
+              <div class="sched-item__name">Bag Making</div>
+              <div class="sched-item__tier">All-Star</div>
+            </div>
+            <div class="sched-item__time">6:00 PM</div>
+          </div>
+          <div class="sched-item">
+            <div class="sched-item__dot" style="background:#9B5DE5;"></div>
+            <div>
+              <div class="sched-item__name">Quilting</div>
+              <div class="sched-item__tier">All-Star</div>
+            </div>
+            <div class="sched-item__time">7:30 PM</div>
+          </div>
+        </div>
+
+        <div class="sched-day">
+          <div class="sched-day__name">Thursday</div>
+          <div class="sched-item">
+            <div class="sched-item__dot" style="background:#FF6B6B;"></div>
+            <div>
+              <div class="sched-item__name">Knitting</div>
+              <div class="sched-item__tier">GOAT</div>
+            </div>
+            <div class="sched-item__time">6:00 PM</div>
+          </div>
+          <div class="sched-item">
+            <div class="sched-item__dot" style="background:#9B5DE5;"></div>
+            <div>
+              <div class="sched-item__name">Quilting</div>
+              <div class="sched-item__tier">GOAT</div>
+            </div>
+            <div class="sched-item__time">7:30 PM</div>
+          </div>
+        </div>
+
+        <div class="sched-day">
+          <div class="sched-day__name">Friday</div>
+          <div class="sched-item">
+            <div class="sched-item__dot" style="background:#00B4D8;"></div>
+            <div>
+              <div class="sched-item__name">Bag Making</div>
+              <div class="sched-item__tier">GOAT</div>
+            </div>
+            <div class="sched-item__time">6:00 PM</div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px; padding-top:18px; border-top:1px solid #e0e0e0;">
+          <p style="font-size:.8rem; color:var(--gray); line-height:1.6;">
+            <strong style="color:var(--dark);">Studio closures</strong> — all US federal holidays, plus:<br>
+            Pi Day (Mar 14) · Earth Day (Apr 22) · Juneteenth (Jun 19)
+          </p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="mission" style="padding: 60px 0;">
+  <div class="container text-center">
+    <h2 style="color:var(--white); margin-bottom:12px;">Ready to Join a Class?</h2>
+    <p style="color:rgba(255,255,255,.7); max-width:480px; margin: 0 auto 28px;">Pick the craft and level that fits you, and we'll see you on the mat — or rather, at the worktable.</p>
+    <a href="classes.html" class="btn btn--coral">View All Classes</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo_stitches_dark.svg" alt="A Few Little Stitches" class="footer__logo">
+        <p>Building a community of makers in Frederick, Maryland — one stitch at a time.</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h5>Classes</h5>
+          <a href="classes.html#knitting">Knitting</a>
+          <a href="classes.html#bags">Bag Making</a>
+          <a href="classes.html#quilting">Quilting</a>
+        </div>
+        <div class="footer__col">
+          <h5>Studio</h5>
+          <a href="about.html">About</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h5>Connect</h5>
+          <a href="https://instagram.com/afewlittlestitches" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="mailto:info@afewlittlestitches.com">Email Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 A Few Little Stitches &nbsp;·&nbsp; Frederick, MD</span>
+      <span>Handcrafted with love.</span>
+    </div>
+  </div>
+  <div class="rainbow-stripe"></div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/calendar.js"></script>
+</body>
+</html>

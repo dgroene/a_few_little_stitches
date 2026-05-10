@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 18px;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  body {
+    font-family: 'Nunito', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .rainbow-border {
+    border-image: linear-gradient(90deg, #FF6B6B, #FFC300, #00B4D8, #9B5DE5) 1;
+  }
+}
+
+/* Rainbow stripe used as section divider */
+.rainbow-stripe {
+  height: 5px;
+  background: linear-gradient(90deg, #FF6B6B 0%, #FFC300 30%, #00B4D8 60%, #9B5DE5 100%);
+}
+
+/* Calendar cell styles */
+.cal-day-holiday {
+  background-color: #fff5f5;
+}
+.cal-day-today {
+  outline: 2px solid #FF6B6B;
+  outline-offset: -2px;
+}
