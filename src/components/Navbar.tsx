@@ -37,7 +37,7 @@ export default function Navbar() {
             </ul>
           </div>
           <NavLink to="/" className="flex items-center ml-1">
-            <img src="/logo.svg" alt="A Few Little Stitches" className="h-24 w-auto" />
+            <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="A Few Little Stitches" className="h-24 w-auto" />
           </NavLink>
         </div>
 

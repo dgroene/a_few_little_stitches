@@ -9,7 +9,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="md:col-span-1">
-            <img src="/logo-dark.svg" alt="A Few Little Stitches" className="h-24 w-auto mb-4" />
+            <img src={`${import.meta.env.BASE_URL}logo-dark.svg`} alt="A Few Little Stitches" className="h-24 w-auto mb-4" />
             <p className="text-sm text-neutral-content/60 leading-relaxed max-w-xs">
               Building a community of makers in Frederick, Maryland — one stitch at a time.
             </p>
