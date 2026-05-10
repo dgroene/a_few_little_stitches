@@ -30,13 +30,21 @@ export default function Navbar() {
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52 font-bold">
             {links.map(l => (
               <li key={l.to}>
-                <NavLink to={l.to} className={({ isActive }) => isActive ? 'text-neutral font-black underline decoration-primary decoration-2 underline-offset-2' : ''}>
+                <NavLink
+                  to={l.to}
+                  onClick={() => (document.activeElement as HTMLElement)?.blur()}
+                  className={({ isActive }) => isActive ? 'text-neutral font-black underline decoration-primary decoration-2 underline-offset-2' : ''}
+                >
                   {l.label}
                 </NavLink>
               </li>
             ))}
             <li className="mt-2">
-              <NavLink to="/classes" className="btn btn-primary btn-sm rounded-full">Sign Up</NavLink>
+              <NavLink
+                to="/classes"
+                onClick={() => (document.activeElement as HTMLElement)?.blur()}
+                className="btn btn-primary btn-sm rounded-full"
+              >Sign Up</NavLink>
             </li>
           </ul>
         </div>

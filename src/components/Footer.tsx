@@ -4,8 +4,8 @@ import RainbowStripe from './RainbowStripe'
 export default function Footer() {
   return (
     <footer className="bg-neutral text-neutral-content">
-      <div className="max-w-6xl mx-auto px-4 pt-14 pb-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+      <div className="max-w-6xl mx-auto px-4 pt-8 pb-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
           {/* Brand */}
           <div className="md:col-span-1">
