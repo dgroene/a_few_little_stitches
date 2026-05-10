@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom'
-import RainbowStripe from '../components/RainbowStripe'
 
 const crafts = [
   {
@@ -47,9 +46,6 @@ export default function Home() {
         <div className="flex flex-wrap gap-4 justify-center">
           <NavLink to="/classes" className="btn btn-primary btn-lg rounded-full shadow-lg px-10">Explore Classes</NavLink>
           <NavLink to="/about"   className="btn btn-outline btn-lg rounded-full border-2 border-primary text-neutral hover:bg-primary hover:text-primary-content px-10">Our Story</NavLink>
-        </div>
-        <div className="mt-16">
-          <RainbowStripe />
         </div>
       </section>
 
